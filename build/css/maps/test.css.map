@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.sass"],"names":[],"mappings":"AAEA;EACmB,yBAAA;EAClB,cAAO,EAAA","file":"test.css","sourcesContent":["@import bourbon/bourbon\n\nbody\n\tbackground-color: black\n\tcolor: white\n"],"sourceRoot":"/source/"}
