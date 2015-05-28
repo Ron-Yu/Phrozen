@@ -47,8 +47,6 @@ gulp.task('exportBowerFiles', function() {
         .pipe(cssFilter.restore());
 });
 
-// run materialize sequence
-gulp.task('materializeBuild', gulpSequence('materializeSass', 'materializFont', 'materializeSassCompile', 'materializJs'));
 
 // export materialize sass files to where we want
 gulp.task('materializeSass', function() {
@@ -83,7 +81,8 @@ gulp.task('materializeSassCompile', function () {
 });
 
 
-
+// run materialize sequence
+gulp.task('materializeBuild', gulpSequence('materializeSass', 'materializFont', 'materializeSassCompile', 'materializJs'));
 
 
 // Sctipt Task
@@ -167,9 +166,9 @@ gulp.task('image', function () {
 //Watch Task
 //Watches JS
 gulp.task('watch', function(){
-  gulp.watch('native/js/*.js', ['scripts']);
-  gulp.watch('native/**/*.jade', ['templates']);
-  gulp.watch('native/sass/**/*.sass', ['sass']);
+    gulp.watch('native/js/*.js', ['scripts']);
+    gulp.watch('native/**/*.jade', ['templates']);
+    gulp.watch('native/sass/**/*.sass', ['sass']);
 });
 
 
