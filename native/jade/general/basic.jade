@@ -13,23 +13,25 @@ html
     meta(name='description', content= metaDesc)
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
 
+    if materialize
+        link(rel="stylesheet", href="assets/lib/materialize/css/materialize.css")
     
     if semantic
-      link(rel="stylesheet", href="assets/lib/css/semantic.css")
+        link(rel="stylesheet", href="assets/lib/css/semantic.css")
     
     if owl
-      link(rel="stylesheet", href="assets/lib/css/owl.carousel.min.css")
-      link(rel="stylesheet", href="assets/lib/css/owl.theme.default.css")
+        link(rel="stylesheet", href="assets/lib/css/owl.carousel.min.css")
+        link(rel="stylesheet", href="assets/lib/css/owl.theme.default.css")
     
     if githubjs
-      link(rel="stylesheet", href="assets/lib/css/github.min.css")
+        link(rel="stylesheet", href="assets/lib/css/github.min.css")
 
     link(rel="stylesheet", type="text/css", href="css/test.css")
 
     
     if skel
-      script(type="application/javascript", src="assets/lib/js/skel.min.js")
-      script(type="application/javascript", src="js/init.js")
+        script(type="application/javascript", src="assets/lib/js/skel.min.js")
+        script(type="application/javascript", src="js/init.js")
    
   body
     include ../include/sidebar
@@ -38,35 +40,38 @@ html
     include ../include/footer
     
     if jQuery
-      script(type="application/javascript", src="assets/lib/js/jquery.js")
+        script(type="application/javascript", src="assets/lib/js/jquery.js")
     
     if jquery_ui
-      script(type="application/javascript", src="assets/lib/js/jquery-ui.min.js")
+        script(type="application/javascript", src="assets/lib/js/jquery-ui.min.js")
+      
+    if materialize
+        script(type="application/javascript", src="assets/lib/materialize/js/materialize.js")
 
     if semantic
-      script(type="application/javascript", src="assets/lib/js/semantic.js")
+        script(type="application/javascript", src="assets/lib/js/semantic.js")
 
     if owl
-      script(type="application/javascript", src="assets/lib/js/owl.carousel.min.js")
+        script(type="application/javascript", src="assets/lib/js/owl.carousel.min.js")
 
     if scrolly
-      script(type="application/javascript", src="assets/lib/js/jquery.scrolly.js")
+        script(type="application/javascript", src="assets/lib/js/jquery.scrolly.js")
 
     if scrollex
-      script(type="application/javascript", src="assets/lib/js/jquery.scrollex.js")
+        script(type="application/javascript", src="assets/lib/js/jquery.scrollex.js")
 
     if throttle
-      script(type="application/javascript", src="assets/lib/js/jquery.ba-throttle-debounce.min.js")
+        script(type="application/javascript", src="assets/lib/js/jquery.ba-throttle-debounce.min.js")
 
     if jquery_knob
-      script(type="application/javascript", src="assets/lib/js/jquery.knob.js")
+        script(type="application/javascript", src="assets/lib/js/jquery.knob.js")
 
     if circle_progress
-      script(type="application/javascript", src="assets/lib/js/circle-progress.js")
+        script(type="application/javascript", src="assets/lib/js/circle-progress.js")
 
     if githubjs
-      script(type="application/javascript", src="assets/lib/js/underscore.js")
-      script(type="application/javascript", src="assets/lib/js/github.min.js")
+        script(type="application/javascript", src="assets/lib/js/underscore.js")
+        script(type="application/javascript", src="assets/lib/js/github.min.js")
       
   
 

@@ -20,7 +20,8 @@ var css_dest_path = 'build/assets/lib/css';
 var img_for_fancybox = 'assets/lib/css';
 var themes_for_semantic_ui = 'bower_components/semantic-ui/dist/themes/**/*';
 var materialize_sass_path = 'bower_components/materialize/sass/**/*';
-var materialize_font_path = 'bower_components/materialize/font/**/*';
+var materialize_font_path = 'bower_components/materialize/dist/font/**/*';
+var materialize_js_path = 'bower_components/materialize/dist/js/**/materialize.js';
 
 var jsFilter = gulpFilter('*.js');
 var cssFilter = gulpFilter('*.css');
@@ -46,8 +47,8 @@ gulp.task('exportBowerFiles', function() {
         .pipe(cssFilter.restore());
 });
 
-// run mateiralize sequence
-gulp.task('mateiralizeBuild', gulpSequence('materializeSass', 'materializFont', 'materializeSassCompile'));
+// run materialize sequence
+gulp.task('materializeBuild', gulpSequence('materializeSass', 'materializFont', 'materializeSassCompile', 'materializJs'));
 
 // export materialize sass files to where we want
 gulp.task('materializeSass', function() {
@@ -56,21 +57,28 @@ gulp.task('materializeSass', function() {
 
 });
 
-
+// export materialize font file
 gulp.task('materializFont', function() {
-  return gulp.src(materialize_font_path, { base: 'bower_components/materialize' })
+  return gulp.src(materialize_font_path, { base: 'bower_components/materialize/dist' })
         .pipe(gulp.dest('build/assets/lib/materialize'));
 
 });
 
-//mateiralize compile task
+// export materialize js file
+gulp.task('materializJs', function() {
+  return gulp.src(materialize_js_path, { base: 'bower_components/materialize/dist' })
+        .pipe(gulp.dest('build/assets/lib/materialize'));
+
+});
+
+//materialize compile task
 //compile
 gulp.task('materializeSassCompile', function () {
     gulp.src('build/assets/lib/materialize/sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('build/assets/lib/materialize'))
+        .pipe(gulp.dest('build/assets/lib/materialize/css'))
         .pipe(notify("materializeSass complie complete!"));
 });
 

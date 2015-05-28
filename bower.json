@@ -68,7 +68,7 @@
       ]
     },
     "materialize": {
-      "main": "dist/js/materialize.js"
+      "main": ""
     }
   }
 }
