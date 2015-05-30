@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     gulpFilter = require('gulp-filter'),
     mainBowerFiles = require('main-bower-files'),
-    gulpSequence = require('gulp-sequence');
+    gulpSequence = require('gulp-sequence'),
+    rename = require("gulp-rename");
 
 var js_dest_path = 'build/assets/lib/js';
 var css_dest_path = 'build/assets/lib/css';
@@ -51,38 +52,47 @@ gulp.task('exportBowerFiles', function() {
 // export materialize sass files to where we want
 gulp.task('materializeSass', function() {
   return gulp.src(materialize_sass_path, { base: 'bower_components' })
-        .pipe(gulp.dest('build/assets/lib'));
+        .pipe(gulp.dest('native/sass/vendor'));
 
 });
+
+// copy materialize sass fiel and rename it
+// gulp.task('materializeSassCopy', function () {
+//     gulp.src('native/sass/materialize/sass/**/materialize.scss')
+//         .pipe(rename({
+//             prefix: "_"
+//           }))
+//         .pipe(gulp.dest('native/sass/materialize/sass/forImport'));
+// });
 
 // export materialize font file
 gulp.task('materializFont', function() {
   return gulp.src(materialize_font_path, { base: 'bower_components/materialize/dist' })
-        .pipe(gulp.dest('build/assets/lib/materialize'));
+        .pipe(gulp.dest('build/css'));
 
 });
 
 // export materialize js file
 gulp.task('materializJs', function() {
-  return gulp.src(materialize_js_path, { base: 'bower_components/materialize/dist' })
-        .pipe(gulp.dest('build/assets/lib/materialize'));
+  return gulp.src(materialize_js_path)
+        .pipe(gulp.dest('build/assets/lib/js'));
 
 });
 
 //materialize compile task
 //compile
-gulp.task('materializeSassCompile', function () {
-    gulp.src('build/assets/lib/materialize/sass/**/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass())
-        .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('build/assets/lib/materialize/css'))
-        .pipe(notify("materializeSass complie complete!"));
-});
+// gulp.task('materializeSassCompile', function () {
+//     gulp.src('native/sass/materialize/sass/**/*.scss')
+//         .pipe(sourcemaps.init())
+//         .pipe(sass())
+//         .pipe(sourcemaps.write('./maps'))
+//         .pipe(gulp.dest('build/assets/lib/materialize/css'))
+//         .pipe(notify("materializeSass complie complete!"));
+// });
 
 
 // run materialize sequence
-gulp.task('materializeBuild', gulpSequence('materializeSass', 'materializFont', 'materializeSassCompile', 'materializJs'));
+gulp.task('materializeBuild', gulpSequence('materializeSass', 'materializFont', 'materializJs'));
 
 
 // Sctipt Task
@@ -115,7 +125,7 @@ gulp.task('scripts', function(){
 //Sass Task
 //compile
 gulp.task('sass', function () {
-    gulp.src('native/sass/**/*.sass')
+    gulp.src('native/sass/application.sass')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
