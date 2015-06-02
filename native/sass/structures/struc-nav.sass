@@ -1,0 +1,54 @@
+//*************************************
+//
+//   navigation bar
+//
+// *************************************
+
+// -------------------------------------
+//   mobile
+// -------------------------------------
+#mobile-demo
+    & > li
+        position: relative
+    a
+        text-align: right
+        font-size: 2rem
+    i
+        position: absolute
+// -------------------------------------
+//   tablet
+// -------------------------------------
+
+// -------------------------------------
+//   desktop
+// -------------------------------------
+
+
++media($desktop)
+
+    // include navigation bar content into container
+    .nav-wrapper
+        +outer-container()
+
+    // ----- dropdown menu ----- //
+    .sub-menu
+        display: none
+        background-color: $primary-color
+        li
+            float: none
+            +clearfix
+
+    // ----- menu item width ----- //
+    nav
+        li
+            position: relative
+            width: 9rem
+            a
+                text-align: right
+            i[class ^= "mdi"]
+                position: absolute
+                font-size: 1.5rem
+                top: -2px
+                left: 35px
+
+    // ----- nav icon position ----- //

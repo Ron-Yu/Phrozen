@@ -1,0 +1,12 @@
+//- entend the basic.jade as template
+extends ../general/basic
+
+//- override variables from config.jade
+append config
+  - var pageTitle = "Phrozen"
+  - var metaDesc = "index" 
+
+
+block mainContent
+  main
+    h1 index

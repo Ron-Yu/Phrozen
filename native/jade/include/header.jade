@@ -1,1 +1,64 @@
 header
+    nav
+        .nav-wrapper
+            a.brand-logo(href='index.html') Logo
+            a.button-collapse(href='#', data-activates='mobile-demo')
+                i.mdi-navigation-menu
+                ul.right.hide-on-med-and-down
+                    block navItems
+                        li
+                            a(href='index.html')
+                                i.mdi-action-home 
+                                | home
+                        li
+                            a.dropdown-button(href="#!")
+                                i.mdi-image-collections
+                                | gallery
+                            ul.sub-menu
+                                li.divider
+                                li
+                                    a(href="#!")
+                                        i.mdi-image-camera-alt 
+                                        | images
+                                li.divider
+                                li
+                                    a(href="#!")
+                                        i.mdi-maps-local-movies 
+                                        | videos
+                        li
+                            a.dropdown-button(href='about.html')
+                                i.mdi-device-now-widgets
+                                | about
+                            ul.sub-menu
+                                li.divider
+                                li
+                                    a(href="#!")
+                                        i.mdi-action-explore 
+                                        | vision
+                                li.divider
+                                li
+                                    a(href="#!")
+                                        i.mdi-social-mood 
+                                        | members
+                        li
+                            a(href='support.html')
+                                i.mdi-social-group-add
+                                | support
+                ul#mobile-demo.side-nav
+                    li
+                        a(href='index.html')
+                            i.mdi-action-home 
+                            | home
+                    li
+                        a(href='gallery.html')
+                            i.mdi-image-collections
+                            | gallery
+                    li
+                        a(href='about.html')
+                            i.mdi-device-now-widgets
+                            | about
+                    li  
+                        a(href='support.html')
+                            i.mdi-social-group-add
+                            | support
+    

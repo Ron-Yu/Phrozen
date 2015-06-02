@@ -1,0 +1,1 @@
+$(function(){$(".button-collapse").sideNav();var n=$(".dropdown-button").parent("li");n.hover(function(){$(this).find(".sub-menu").fadeIn("slow")},function(){$(this).find(".sub-menu").fadeOut("slow")})});

@@ -155,7 +155,7 @@ gulp.task('styles', function () {
 //Template task
 //compile jade
 gulp.task('templates', function () {
-  gulp.src('native/jade/index.jade')
+  gulp.src('native/jade/page/**/*.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
