@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     gulpFilter = require('gulp-filter'),
     mainBowerFiles = require('main-bower-files'),
     gulpSequence = require('gulp-sequence'),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    browserSync = require('browser-sync').create();
 
 var js_dest_path = 'build/assets/lib/js';
 var css_dest_path = 'build/assets/lib/css';

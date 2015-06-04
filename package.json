@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap-styl": "^4.0.2",
     "bower-installer": "^1.2.0",
+    "browser-sync": "^2.7.6",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-bower": "^0.0.10",

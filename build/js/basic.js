@@ -1,1 +1,1 @@
-$(function(){$(".button-collapse").sideNav();var n=$(".dropdown-button").parent("li");n.hover(function(){$(this).find(".sub-menu").fadeIn("slow")},function(){$(this).find(".sub-menu").fadeOut("slow")})});
+$(function(){var n=$(".dropdown-button").parent("li"),o=$("#mobile-demo").find("li");$(".button-collapse").sideNav(),o.on("click",".selector",function(n){n.preventDefault()}),n.hover(function(){$(this).find(".sub-menu").fadeIn("slow")},function(){$(this).find(".sub-menu").fadeOut("slow")})});

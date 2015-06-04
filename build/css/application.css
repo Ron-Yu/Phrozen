@@ -7825,13 +7825,19 @@ body:before {
   width: 100%;
   z-index: -1; }
 
-#mobile-demo > li {
-  position: relative; }
-#mobile-demo a {
-  text-align: right;
-  font-size: 2rem; }
-#mobile-demo i {
-  position: absolute; }
+#mobile-demo {
+  background-color: #ee6e73; }
+  #mobile-demo > li {
+    position: relative; }
+  #mobile-demo a {
+    text-align: right;
+    font-size: 2rem; }
+  #mobile-demo i {
+    position: absolute; }
+  #mobile-demo .divider {
+    background-color: #E0E0E0; }
+  #mobile-demo .waves-effect {
+    display: block; }
 
 @media screen and (min-width: 992px)  {
   .nav-wrapper {
