@@ -7,19 +7,28 @@
 // -------------------------------------
 //   mobile
 // -------------------------------------
-#mobile-demo
-    background-color: $primary-color
-    & > li
-        position: relative
-    a
-        text-align: right
-        font-size: 2rem
-    i
-        position: absolute
-    .divider
-        background-color: #E0E0E0
-    .waves-effect
-        display: block
+
++media($mobile)
+    #mobile-demo
+        background-color: $primary-color
+        & > li
+            position: relative
+            padding: 0
+        a
+            text-align: right
+            font-size: 2rem
+            &.MobileItemClickEffect
+                color: #fff
+            &.MobileItemBlurred
+                filter: blur(5px)
+        i
+            position: absolute
+            &.MobileItemClickEffect
+                @extend a.MobileItemClickEffect
+        .divider
+            background-color: #E0E0E0
+        .waves-effect
+            display: block
 // -------------------------------------
 //   tablet
 // -------------------------------------
@@ -27,7 +36,6 @@
 // -------------------------------------
 //   desktop
 // -------------------------------------
-
 
 +media($desktop)
 
