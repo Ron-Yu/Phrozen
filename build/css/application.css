@@ -1766,7 +1766,7 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-img {
+img, #index .view-2 figcaption {
   border: 0; }
 
 /**
@@ -2035,7 +2035,7 @@ i {
   i.large {
     font-size: 6rem; }
 
-img.responsive-img, video.responsive-video {
+img.responsive-img, #index .view-2 figcaption.responsive-img, video.responsive-video {
   max-width: 100%;
   height: auto; }
 
@@ -2071,7 +2071,7 @@ img.responsive-img, video.responsive-video {
   right: 0;
   bottom: 0;
   z-index: -1; }
-  .parallax img {
+  .parallax img, .parallax #index .view-2 figcaption, #index .view-2 .parallax figcaption {
     display: none;
     position: absolute;
     left: 50%;
@@ -5312,7 +5312,7 @@ small {
       height: 170px; }
   .card .card-image {
     position: relative; }
-    .card .card-image img {
+    .card .card-image img, .card .card-image #index .view-2 figcaption, #index .view-2 .card .card-image figcaption {
       border-radius: 2px 2px 0 0;
       position: relative;
       left: 0;
@@ -7154,7 +7154,7 @@ select {
       width: 100%;
       height: inherit;
       overflow: hidden; }
-      .slider .slides li img {
+      .slider .slides li img, .slider .slides li #index .view-2 figcaption, #index .view-2 .slider .slides li figcaption {
         height: 100%;
         width: 100%;
         background-size: cover;
@@ -7825,18 +7825,76 @@ body:before {
   width: 100%;
   z-index: -1; }
 
+/***********************
+	*
+	*		config
+	*
+	************************/
+/*---------------------
+	font-face
+ ----------------------*/
+/*---------------------
+	Colors
+ ----------------------*/
+/*  --- original color --- */
+/*  --- applied color --- */
+/*---------------------
+	Breakpoints
+ ----------------------*/
+/*---------------------
+	padding & margin
+ ----------------------*/
+/***********************
+	*
+	*		base
+	*
+	************************/
+/*---------------------
+	Block Content
+ ----------------------*/
+/*  --- nav bar --- */
 nav {
-  background-color: rgba(224, 131, 135, 0.17); }
+  background-color: rgba(224, 131, 135, 0.17);
+  position: fixed;
+  top: 0px; }
+  nav .button-collapse {
+    padding: 0 10px; }
 
+/*---------------------
+	Inline Content
+ ----------------------*/
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff; }
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff; }
+
+/***********************
+	*
+	*		navigation bar
+	*
+	************************/
+/*---------------------
+	mobile
+ ----------------------*/
 @media screen and (max-width: 600px)  {
   #mobile-demo {
-    background-color: #ee6e73; }
+    background-color: rgba(224, 131, 135, 0.17); }
     #mobile-demo > li {
       position: relative;
       padding: 0; }
     #mobile-demo a {
       text-align: right;
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: #fff; }
       #mobile-demo a.MobileItemClickEffect, #mobile-demo i.MobileItemClickEffect {
         color: #fff; }
       #mobile-demo a.MobileItemBlurred {
@@ -7845,15 +7903,42 @@ nav {
     #mobile-demo i {
       position: absolute; }
     #mobile-demo .divider {
-      background-color: #E0E0E0; }
+      background-color: #e0e0e0; }
     #mobile-demo .waves-effect {
       display: block; } }
 
+/*---------------------
+	tablet
+ ----------------------*/
+@media screen and (max-width: 991px)  {
+  #mobile-demo {
+    background-color: rgba(224, 131, 135, 0.17); }
+    #mobile-demo > li {
+      position: relative;
+      padding: 0; }
+    #mobile-demo a {
+      text-align: right;
+      font-size: 2rem;
+      color: #fff; }
+      #mobile-demo a.MobileItemClickEffect, #mobile-demo i.MobileItemClickEffect {
+        color: #fff; }
+      #mobile-demo a.MobileItemBlurred {
+        -webkit-filter: blur(5px);
+                filter: blur(5px); }
+    #mobile-demo i {
+      position: absolute; }
+    #mobile-demo .divider {
+      background-color: #e0e0e0; }
+    #mobile-demo .waves-effect {
+      display: block; } }
+
+/*---------------------
+	desktop
+ ----------------------*/
 @media screen and (min-width: 992px)  {
   nav {
-    position: fixed;
-    top: 0px;
     z-index: 1; }
+  /* include navigation bar content into container */
   .nav-wrapper {
     max-width: 68em;
     margin-left: auto;
@@ -7862,15 +7947,17 @@ nav {
       clear: both;
       content: "";
       display: table; }
+  /*  --- dropdown menu --- */
   .sub-menu {
     display: none;
-    background-color: #ee6e73; }
+    background-color: rgba(224, 131, 135, 0.17); }
     .sub-menu li {
       float: none; }
       .sub-menu li::after {
         clear: both;
         content: "";
         display: table; }
+  /*  --- menu item width --- */
   nav li {
     position: relative;
     width: 9rem; }
@@ -7882,20 +7969,51 @@ nav {
       top: -2px;
       left: 35px; } }
 
-#index {
+#index .view-1 {
   background: url('../img/watch.jpg') center center no-repeat;
   background: url('../img/watch.jpg') center center no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh; }
-  #index hgroup {
+  height: 100vh;
+  color: #fff; }
+  #index .view-1 hgroup {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: white; }
+    transform: translate(-50%, -50%); }
+#index .view-2 .outer-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  #index .view-2 .outer-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+#index .view-2 .item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  #index .view-2 .item:last-child {
+    margin-right: 0; }
+#index .view-2 .item-image-wrapper {
+  margin: 0; }
+#index .view-2 img, #index .view-2 figcaption {
+  width: 100%;
+  height: 250px; }
+#index .view-2 figcaption {
+  position: relative; }
+#index .view-2 .desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  #index .view-2 .desc h5, #index .view-2 .desc p {
+    text-align: center; }
 
 
 /*# sourceMappingURL=maps/application.css.map */
