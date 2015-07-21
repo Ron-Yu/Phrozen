@@ -1,0 +1,35 @@
+/***********************
+	*
+	*		footer
+	* 	
+	************************/
+
+/*---------------------
+	mobile
+ ----------------------*/
++media($mobile)
+	footer
+		.footer-desc
+			+span-columns(12)
+		.link-wrapper
+			+span-columns(12)
+		.footer-copyright
+			+span-columns(12)
+
+
+/*---------------------
+	tablet
+ ----------------------*/
+
+/*---------------------
+	desktop
+ ----------------------*/
++media($desktop)
+	footer
+		.footer-desc
+			+span-columns(9)
+		.link-wrapper
+			+span-columns(3)
+			+omega()
+		.footer-copyright
+			+span-columns(12)

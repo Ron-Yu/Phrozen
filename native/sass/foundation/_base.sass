@@ -9,9 +9,14 @@
 	Block Content
  ----------------------*/
 
+html, body
+	height: 100%
+	line-height: 0;
+
 /*  --- nav bar --- */
 
 nav
+	z-index: 1
 	background-color: $primary-color
 	@extend .z-depth-2
 	+position( fixed, 0px null null null)

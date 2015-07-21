@@ -30,7 +30,9 @@
     "jquery-circle-progress": "~1.1.2",
     "githubjs": "~0.1.3",
     "underscore": "~1.8.3",
-    "materialize": "~0.96.1"
+    "materialize": "~0.96.1",
+    "typed.js": "*",
+    "textillate": "~0.4.0"
   },
   "install": {
     "path": {

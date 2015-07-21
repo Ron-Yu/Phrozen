@@ -14,7 +14,8 @@ var gulp = require('gulp'),
     gulpFilter = require('gulp-filter'),
     mainBowerFiles = require('main-bower-files'),
     gulpSequence = require('gulp-sequence'),
-    rename = require("gulp-rename");
+    rename = require("gulp-rename"),
+    browserSync = require('browser-sync').create();
 
 var js_dest_path = 'build/assets/lib/js';
 var css_dest_path = 'build/assets/lib/css';
@@ -134,6 +135,7 @@ gulp.task('sass', function () {
         .pipe(prefix())
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('build/css'))
+        .pipe(browserSync.stream())
         .pipe(notify("Sass complie complete!"));
 });
 
@@ -161,25 +163,47 @@ gulp.task('templates', function () {
       pretty: true
     }))
     .pipe(gulp.dest('build'))
+    .pipe(browserSync.stream())
     .pipe(notify("Template complie complete!"));
 });
 
 //Images task
 //compress
-gulp.task('image', function () {
-  gulp.src('native/img/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('build/img'))
-    .pipe(notify("Images compress complete!"));
+// gulp.task('image', function () {
+//   gulp.src('native/img/*')
+//     .pipe(imagemin())
+//     .pipe(gulp.dest('build/img'))
+//     .pipe(notify("Images compress complete!"));
+// });
+
+gulp.task('serve', ['sass', 'templates', 'scripts'], function() {
+
+    browserSync.init({
+        proxy: "ron.localhost.net/Phrozen/build/"
+    });
+
+    gulp.watch('native/js/*.js', ['scripts']).on('change', browserSync.reload);
+    gulp.watch('native/**/*.jade', ['templates']).on('change', browserSync.reload);
+    gulp.watch('native/sass/**/*.sass', ['sass']).on('change', browserSync.reload);
+
+    // gulp.watch("app/scss/*.scss", ['sass']);
+    // gulp.watch("app/*.html").on('change', browserSync.reload);
 });
+
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "ron.localhost.net/Phrozen/build/"
+    });
+});
+
 
 //Watch Task
 //Watches JS
-gulp.task('watch', function(){
-    gulp.watch('native/js/*.js', ['scripts']);
-    gulp.watch('native/**/*.jade', ['templates']);
-    gulp.watch('native/sass/**/*.sass', ['sass']);
-});
+// gulp.task('watch', function(){
+//     gulp.watch('native/js/*.js', ['scripts']);
+//     gulp.watch('native/**/*.jade', ['templates']);
+//     gulp.watch('native/sass/**/*.sass', ['sass']);
+// });
 
 
-gulp.task('default', ['scripts', 'sass', 'templates', 'watch']);
+gulp.task('default', ['serve']);

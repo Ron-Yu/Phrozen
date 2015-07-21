@@ -6,33 +6,84 @@ append config
   - var pageTitle = "Phrozen"
   - var metaDesc = "index" 
 
-
 block mainContent
   article#index
-    article.view-1
-      hgroup
-        h1 Phrozen Index Page
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, omnis.
-    article.view-2
+    article.view.view-1
+      video#bgvid.hide-on-med-and-down(autoplay, loop, poster='polina.jpg')
+        source(src='video/video1.webm', type='video/webm')
+        source(src='video/video1.mp4', type='video/mp4')
+        source(src='video/video1.ogg', type='video/ogg')
+      .desc
+        hgroup
+          h1.tlt
+            ul.texts
+              li first sentence
+              li second sentence
+              li third sentence
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, velit?
+            br
+            | Lorem ipsum dolor sit amet.
+            br
+            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    article.view.view-2
       section.outer-container
         section.item
           figure.item-image-wrapper
-            img(src="img/bg1.jpg", alt="")
-            figcaption
+            img(src="img/bg2.jpg", alt="")
+            figcaption.desc-wrapper
               section.desc
-                h5 item1
-                p  Lorem ipsum dolor sit amet.
+                h5 test
+                p test
         section.item
           figure.item-image-wrapper
-            figcaption
-              section.desc
-                h5 item1
-                p  Lorem ipsum dolor sit amet.
             img(src="img/bg4.jpg", alt="")
+            figcaption.desc-wrapper
+              section.desc
+                h5 test
+                p test
         section.item
           figure.item-image-wrapper
-            img(src="img/bg3.jpg", alt="")
-            figcaption
+            img(src="img/bg7.jpg", alt="")
+            figcaption.desc-wrapper
               section.desc
-                h5 item1
-                p  Lorem ipsum dolor sit amet.
+                h5 test
+                p test
+    main.view.view-3
+      section.outer-container
+        section.first-parts-list.hide-on-med-and-down
+          ul.parts
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
+        section.main-product-wrapper
+          img(src="https://mrl.global.ssl.fastly.net/uploads/ronyu/1433169968643.png?se=2050-06-01T14%3A46%3A08Z&sp=rw&sr=b&sv=2012-02-12&sig=rEwWuQlxIWtNHKIUQ13VHGEx0bUdg1teAiTn%2FlD%2Bb%2Bs%3D", alt="")
+        section.second-parts-list.hide-on-med-and-down
+          ul.parts
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
+            li
+              figure
+                img(src="img/bg9.jpg", alt="")
+                figcaption
+                  p  Lorem ipsum dolor sit amet.
