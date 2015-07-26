@@ -68,18 +68,8 @@ $(function() {
     (function() {
 
       var indexTitle = $('#index').find('.view-1').find('.desc').find('.tlt');
-          // indexStrings = [],
-          // i = 0;
-
-      // indexStrings[0] = "first sentence";
-      // indexStrings[1] = "second sentence";
-      // indexStrings[2] = "third sentence";
-
-      // desc.on('start.tlt', function () {
-      //     desc.css('opacity', '1');
-      //   });
-
-      indexTitle.textillate({
+       
+        indexTitle.textillate({
           // enable looping
           loop: true,
 
@@ -156,5 +146,18 @@ $(function() {
 
     })();
 
-  
+
+    // view3 flip effect
+    $(".card").flip({
+      trigger:'click',
+      speed: 1500
+    });
+
+    // view4 parallex effect
+    $('.parallax').parallax();
+
 });
+    
+
+  
+

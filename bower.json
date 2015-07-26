@@ -32,7 +32,8 @@
     "underscore": "~1.8.3",
     "materialize": "~0.96.1",
     "typed.js": "*",
-    "textillate": "~0.4.0"
+    "textillate": "~0.4.0",
+    "flip": "~1.0.14"
   },
   "install": {
     "path": {
@@ -71,6 +72,9 @@
     },
     "materialize": {
       "main": ""
+    },
+    "flip": {
+      "main": "dist/jquery.flip.min.js"
     }
   }
 }

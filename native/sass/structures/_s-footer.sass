@@ -26,10 +26,43 @@
  ----------------------*/
 +media($desktop)
 	footer
-		.footer-desc
-			+span-columns(9)
-		.link-wrapper
-			+span-columns(3)
+		background-color: rgba(0, 0, 0, 0.7)
+		.outer-container
+			+outer-container()
+		.footer-info
+			+span-columns(8)
+			.eamil-form
+				+span-columns(4 of 8)
+				+omega()
+				label
+					line-height: 1.5
+				input
+					color: $white
+			.footer-link-wrapper
+				+span-columns(8 of 8)
+				li
+					+span-columns(3)
+				a
+					display: block
+					line-height: 1.5
+					color: $white
+		.footer-social-wrapper
+			+span-columns(4)
 			+omega()
+			.footer-social-links
+				+span-columns(4 of 4)
+				li
+					+span-columns(6)
+					+omega(2n)
+					text-align: center
+				a
+					display: block
+					padding-top: 0
+					padding-bottom: 0
+				i
+					color: $white
 		.footer-copyright
 			+span-columns(12)
+			p
+				color: $white
+				text-align: center
