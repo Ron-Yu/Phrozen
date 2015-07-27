@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     mainBowerFiles = require('main-bower-files'),
     gulpSequence = require('gulp-sequence'),
     rename = require("gulp-rename"),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    ghPages = require('gulp-gh-pages');
 
 var js_dest_path = 'build/assets/lib/js';
 var css_dest_path = 'build/assets/lib/css';
@@ -194,6 +195,11 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         proxy: "ron.localhost.net/Phrozen/build/"
     });
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
 
 
