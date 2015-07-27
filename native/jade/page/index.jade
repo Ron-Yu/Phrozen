@@ -1,0 +1,155 @@
+//- entend the basic.jade as template
+extends ../general/basic
+
+//- override variables from config.jade
+append config
+  - var pageTitle = "Phrozen"
+  - var metaDesc = "index" 
+
+block mainContent
+  article#index
+    article.view.view-1
+      video#bgvid.hide-on-med-and-down(autoplay, loop, poster='polina.jpg')
+        source(src='video/newVideo.webm', type='video/webm')
+        source(src='video/newVideo.mp4', type='video/mp4')
+        source(src='video/newVideo.ogg', type='video/ogg')
+      .desc
+        hgroup
+          h1.tlt
+            ul.texts
+              li first sentence
+              li second sentence
+              li third sentence
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, velit?
+            br
+            | Lorem ipsum dolor sit amet.
+            br
+            |  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    article.view.view-2
+      section.outer-container
+        section.item
+          figure.item-image-wrapper
+            img(src="img/bg2.jpg", alt="")
+            figcaption.desc-wrapper
+              section.desc
+                h5 test
+                p test
+        section.item
+          figure.item-image-wrapper
+            img(src="img/bg4.jpg", alt="")
+            figcaption.desc-wrapper
+              section.desc
+                h5 test
+                p test
+        section.item
+          figure.item-image-wrapper
+            img(src="img/bg7.jpg", alt="")
+            figcaption.desc-wrapper
+              section.desc
+                h5 test
+                p test
+    article.view.short-bridge
+      section.outer-container
+        figure.parallax-container
+          .parallax
+            img(src="img/bg5.jpg", alt="")
+            h1 test
+    main.view.view-3
+      section.outer-container
+        .card.card1
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme1
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+        .card.card2
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme2
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+        .card.card3
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme3
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+        .card.card4
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme4
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+        .card.card5
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme5
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+        .card.card6
+          .front.waves-effect.waves-light
+            a.btn-floating.btn-large.waves-effect.waves-light.red.flip-btn
+              i.mdi-action-find-in-page
+            img(src="img/bg8.jpg", alt="")
+          .back.waves-effect.waves-light
+            img.back-img(src="img/bg9.jpg", alt="")
+            figure.back-desc
+              img(src="img/bg4.jpg", alt="")
+              figcaption
+                h5 itme6
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, animi, dolore. Provident nisi facilis similique.
+    article.view.view-4
+      section.outer-container
+        figure.parallax-container.long-bridge
+          .parallax
+            img(src="img/bg7.jpg", alt="")
+            .interface-desc
+              .desc
+                h2 interface view
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga pariatur saepe vitae assumenda cum debitis ipsam cupiditate. At ex quisquam dolores id dignissimos perspiciatis numquam ducimus asperiores pariatur modi.
+              .desc
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga pariatur saepe vitae assumenda cum debitis ipsam cupiditate. At ex quisquam dolores id dignissimos perspiciatis numquam ducimus asperiores pariatur modi.
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ipsam blanditiis cum alias, esse, consectetur. Quibusdam distinctio ipsam cum error, deleniti sapiente unde alias earum laudantium nisi nostrum corrupti, sequi soluta non deserunt quis explicabo tenetur quas consequuntur maxime est.
+    article.view.view-5
+      section.outer-container
+        figure.parallax-container.long-bridge
+          .parallax
+            img(src="img/bg6.jpg", alt="")
+            .material-desc
+              .desc
+                h2 interface view
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga pariatur saepe vitae assumenda cum debitis ipsam cupiditate. At ex quisquam dolores id dignissimos perspiciatis numquam ducimus asperiores pariatur modi.
+              .desc
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident fuga pariatur saepe vitae assumenda cum debitis ipsam cupiditate. At ex quisquam dolores id dignissimos perspiciatis numquam ducimus asperiores pariatur modi.
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ipsam blanditiis cum alias, esse, consectetur. Quibusdam distinctio ipsam cum error, deleniti sapiente unde alias earum laudantium nisi nostrum corrupti, sequi soluta non deserunt quis explicabo tenetur quas consequuntur maxime est.

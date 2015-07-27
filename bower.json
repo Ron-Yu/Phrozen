@@ -1,0 +1,81 @@
+{
+  "name": "newPortfolio",
+  "version": "0.0.0",
+  "authors": [
+    "Ron Yu <ronyu77@gmail.com>"
+  ],
+  "description": "test",
+  "keywords": [
+    "test"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic-ui": "~1.12.1",
+    "jquery-throttle-debounce": "https://github.com/cowboy/jquery-throttle-debounce.git",
+    "jquery-ui": "~1.11.4",
+    "skel": "~2.2.1",
+    "owl.carousel": "*",
+    "jquery.scrollex": "~0.2.0",
+    "scrolly": "https://github.com/Victa/scrolly.git",
+    "parallax": "https://github.com/pixelcog/parallax.js/",
+    "parallax.js": "~1.3.2",
+    "jquery-knob": "~1.2.11",
+    "jquery-circle-progress": "~1.1.2",
+    "githubjs": "~0.1.3",
+    "underscore": "~1.8.3",
+    "materialize": "~0.96.1",
+    "typed.js": "*",
+    "textillate": "~0.4.0",
+    "flip": "~1.0.14",
+    "crayon": "*"
+  },
+  "install": {
+    "path": {
+      "css": "build/bowerinstalltest/css",
+      "js": "build/bowerinstalltest/js"
+    }
+  },
+  "overrides": {
+    "jquery-throttle-debounce": {
+      "main": "jquery.ba-throttle-debounce.min.js"
+    },
+    "jquery-ui": {
+      "main": "jquery-ui.min.js"
+    },
+    "skel": {
+      "main": [
+        "dist/skel.min.js",
+        "dist/skel.css"
+      ]
+    },
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.min.js",
+        "dist/assets/owl.carousel.min.css",
+        "dist/assets/owl.theme.default.css"
+      ]
+    },
+    "scrolly": {
+      "main": "jquery.scrolly.js"
+    },
+    "githubjs": {
+      "main": [
+        "dist/github.min.js",
+        "dist/github.min.css"
+      ]
+    },
+    "materialize": {
+      "main": ""
+    },
+    "flip": {
+      "main": "dist/jquery.flip.min.js"
+    }
+  }
+}
