@@ -7916,7 +7916,7 @@ nav {
  ----------------------*/
 @media screen and (min-width: 993px)  {
   nav {
-    z-index: 1; }
+    z-index: 999; }
   /* include navigation bar content into container */
   .nav-wrapper {
     max-width: 68em;
@@ -8192,10 +8192,10 @@ nav {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
-    #index .view-2 .desc h5, #index .view-2 .desc p {
+    #index .view-2 .desc h4, #index .view-2 .desc p {
       text-align: center;
       color: #fff;
-      margin: 0; }
+      line-height: 1.5; }
   #index .view-3 .outer-container {
     max-width: 68em;
     margin-left: auto;
@@ -8311,34 +8311,49 @@ nav {
   #index .view-4 figure {
     margin: 0; }
   #index .view-4 .parallax-container {
-    height: 700px; }
+    height: 100vh;
+    z-index: 1; }
   #index .view-4 img {
     width: 100%;
     -webkit-filter: blur(20px);
             filter: blur(20px); }
-  #index .view-4 .interface-desc {
-    max-width: 68em;
+  #index .view-4 .slider-show-wrapper {
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    margin-top: 100px;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    min-height: 500px; }
-    #index .view-4 .interface-desc::after {
+    padding: 100px 30px;
+    height: 100vh; }
+    #index .view-4 .slider-show-wrapper::after {
       clear: both;
       content: "";
       display: table; }
-    #index .view-4 .interface-desc .desc {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      #index .view-4 .interface-desc .desc:last-child {
-        margin-right: 0; }
-    #index .view-4 .interface-desc p {
-      line-height: 1.5; }
+    #index .view-4 .slider-show-wrapper p, #index .view-4 .slider-show-wrapper h1 {
+      line-height: 1.5;
+      color: #fff; }
+  #index .view-4 .slider-item {
+    height: calc(100vh - 200px);
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto; }
+    #index .view-4 .slider-item::after {
+      clear: both;
+      content: "";
+      display: table; }
+  #index .view-4 .fa {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5); }
+  #index .view-4 .fa-chevron-left {
+    left: 100px; }
+  #index .view-4 .fa-chevron-right {
+    right: 100px; }
   #index .view-5 .outer-container {
     max-width: 100%;
     margin-left: auto;
@@ -8419,6 +8434,9 @@ nav {
 @media screen and (min-width: 993px)  {
   footer {
     background-color: rgba(0, 0, 0, 0.7); }
+    footer a, footer p, footer label, footer input {
+      color: #fff;
+      line-height: 1.5; }
     footer .outer-container {
       max-width: 68em;
       margin-left: auto;
@@ -8434,69 +8452,65 @@ nav {
       width: 65.88078%; }
       footer .footer-info:last-child {
         margin-right: 0; }
+      footer .footer-info .input-desc {
+        width: 80%; }
       footer .footer-info .eamil-form {
         float: left;
         display: block;
         margin-right: 3.57866%;
-        width: 48.21067%;
+        width: 100%;
         margin-right: 0; }
         footer .footer-info .eamil-form:last-child {
           margin-right: 0; }
-        footer .footer-info .eamil-form label {
-          line-height: 1.5; }
-        footer .footer-info .eamil-form input {
-          color: #fff; }
-      footer .footer-info .footer-link-wrapper {
+        footer .footer-info .eamil-form .input-field {
+          width: 50%; }
+      footer .footer-info .footer-social-wrapper {
         float: left;
         display: block;
         margin-right: 3.57866%;
-        width: 100%; }
-        footer .footer-info .footer-link-wrapper:last-child {
+        width: 48.21067%; }
+        footer .footer-info .footer-social-wrapper:last-child {
           margin-right: 0; }
-        footer .footer-info .footer-link-wrapper li {
+        footer .footer-info .footer-social-wrapper li {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 23.23176%; }
-          footer .footer-info .footer-link-wrapper li:last-child {
+          footer .footer-info .footer-social-wrapper li:last-child {
             margin-right: 0; }
-        footer .footer-info .footer-link-wrapper a {
-          display: block;
-          line-height: 1.5;
-          color: #fff; }
-    footer .footer-social-wrapper {
+        footer .footer-info .footer-social-wrapper a {
+          display: block; }
+    footer .footer-link-wrapper {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%;
       margin-right: 0; }
-      footer .footer-social-wrapper:last-child {
+      footer .footer-link-wrapper:last-child {
         margin-right: 0; }
-      footer .footer-social-wrapper .footer-social-links {
+      footer .footer-link-wrapper .footer-nav-links {
         float: left;
         display: block;
         margin-right: 7.42297%;
         width: 100%; }
-        footer .footer-social-wrapper .footer-social-links:last-child {
+        footer .footer-link-wrapper .footer-nav-links:last-child {
           margin-right: 0; }
-        footer .footer-social-wrapper .footer-social-links li {
+        footer .footer-link-wrapper .footer-nav-links li {
           float: left;
           display: block;
           margin-right: 2.35765%;
           width: 48.82117%;
           text-align: center; }
-          footer .footer-social-wrapper .footer-social-links li:last-child {
+          footer .footer-link-wrapper .footer-nav-links li:last-child {
             margin-right: 0; }
-          footer .footer-social-wrapper .footer-social-links li:nth-child(2n) {
+          footer .footer-link-wrapper .footer-nav-links li:nth-child(2n) {
             margin-right: 0; }
-          footer .footer-social-wrapper .footer-social-links li:nth-child(2n+1) {
+          footer .footer-link-wrapper .footer-nav-links li:nth-child(2n+1) {
             clear: left; }
-        footer .footer-social-wrapper .footer-social-links a {
+        footer .footer-link-wrapper .footer-nav-links a {
           display: block;
           padding-top: 0;
           padding-bottom: 0; }
-        footer .footer-social-wrapper .footer-social-links i {
-          color: #fff; }
     footer .footer-copyright {
       float: left;
       display: block;
@@ -8505,7 +8519,6 @@ nav {
       footer .footer-copyright:last-child {
         margin-right: 0; }
       footer .footer-copyright p {
-        color: #fff;
         text-align: center; } }
 
 

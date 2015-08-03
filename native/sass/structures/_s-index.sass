@@ -188,10 +188,10 @@
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
-        h5, p
+        h4, p
           text-align: center
           color: $white
-          margin: 0
+          line-height: 1.5
     .view-3
       .outer-container
         +outer-container()
@@ -282,22 +282,34 @@
       figure
         margin: 0
       .parallax-container
-        height: 700px
+        height: 100vh
+        z-index: 1
       img
         width: 100%
         filter: blur(20px)
-      .interface-desc
-        +outer-container()
+      .slider-show-wrapper
+        +outer-container(100%)
         position: relative
-        margin-top: 100px
         color: $white
         background-color: rgba($black, 0.5)
-        padding: 30px
-        min-height: 500px
-        .desc
-          +span-columns(6)
-        p
+        padding: 100px 30px
+        height: 100vh
+        p, h1
           line-height: 1.5
+          color: $white
+      .slider-item
+        height: calc(100vh - 200px)
+        +outer-container()
+      .fa
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        cursor: pointer
+        color: rgba($white, 0.5)
+      .fa-chevron-left
+        left: 100px
+      .fa-chevron-right
+        right: 100px
     .view-5
       .outer-container
         +outer-container(100%)

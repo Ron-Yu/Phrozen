@@ -27,29 +27,30 @@
 +media($desktop)
 	footer
 		background-color: rgba(0, 0, 0, 0.7)
+		a, p, label, input
+			color: $white
+			line-height: 1.5
 		.outer-container
 			+outer-container()
 		.footer-info
 			+span-columns(8)
+			.input-desc
+				width: 80%
 			.eamil-form
-				+span-columns(4 of 8)
-				+omega()
-				label
-					line-height: 1.5
-				input
-					color: $white
-			.footer-link-wrapper
 				+span-columns(8 of 8)
+				+omega()
+				.input-field
+					width: 50%
+			.footer-social-wrapper
+				+span-columns(4 of 8)
 				li
 					+span-columns(3)
 				a
 					display: block
-					line-height: 1.5
-					color: $white
-		.footer-social-wrapper
+		.footer-link-wrapper
 			+span-columns(4)
 			+omega()
-			.footer-social-links
+			.footer-nav-links
 				+span-columns(4 of 4)
 				li
 					+span-columns(6)
@@ -59,10 +60,7 @@
 					display: block
 					padding-top: 0
 					padding-bottom: 0
-				i
-					color: $white
 		.footer-copyright
 			+span-columns(12)
 			p
-				color: $white
 				text-align: center

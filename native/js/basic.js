@@ -153,8 +153,39 @@ $(function() {
       speed: 1500
     });
 
-    // view4 parallex effect
+
+    // bridge parallex effect
     $('.parallax').parallax();
+
+
+    // slider initialize
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    dots: true,
+    smartSpeed: 1000,
+    items: 1
+    });
+
+    (function(){
+      var navCtrl = $('.view-4').find('.slider-nav-control'),
+          btnNext = navCtrl.find('.fa-chevron-right'),
+          btnPrev = navCtrl.find('.fa-chevron-left'),
+          owl = $('.owl-carousel');
+
+      console.log(btnNext);
+
+      btnNext.click(function() {
+        owl.trigger('next.owl.carousel');
+      })
+
+      btnPrev.click(function() {
+        owl.trigger('prev.owl.carousel');
+      })
+
+    })();
+    
 
 });
     

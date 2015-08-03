@@ -1,12 +1,27 @@
 footer
   article.outer-container
     section.footer-info
+      p.input-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequuntur asperiores autem cum at, sit rerum nam voluptatem sed eligendi.
       form.eamil-form
         .input-field
           input#email.validate(type='email')
           |           
           label(for='email', data-error='wrong', data-success='right') Email
-      ul.footer-link-wrapper
+      ul.footer-social-wrapper
+        li
+          a(href="home.html")
+            i.fa.fa-facebook.fa-2x
+        li
+          a(href="gallery.html")
+            i.fa.fa-twitter.fa-2x
+        li
+          a(href="about.html")
+            i.fa.fa-youtube.fa-2x
+        li
+          a(href="support.html")
+            i.fa.fa-pinterest.fa-2x
+    section.footer-link-wrapper
+      ul.footer-nav-links
         li
           a(href="home.html") home
         li
@@ -15,19 +30,6 @@ footer
           a(href="about.html") about
         li
           a(href="support.html") support
-    section.footer-social-wrapper
-      ul.footer-social-links
-        li
-          a(href="home.html")
-            i.material-icons.medium query_builder
-        li
-          a(href="gallery.html")
-            i.material-icons.medium query_builder
-        li
-          a(href="about.html")
-            i.material-icons.medium query_builder
-        li
-          a(href="support.html")
-            i.material-icons.medium query_builder
+            
     section.footer-copyright
-      p © 2014 Copyright Text 
+      p © 2015 Copyright Text 
