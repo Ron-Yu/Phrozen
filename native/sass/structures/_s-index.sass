@@ -1,7 +1,7 @@
 /***********************
   *
   *   index page
-  *   
+  *
   ************************/
 
 
@@ -198,7 +198,7 @@
         .card
           width: 50%
           height: 300px
-          margin: 0 
+          margin: 0
           float: left
           cursor: pointer
           img
@@ -313,22 +313,40 @@
     .view-5
       .outer-container
         +outer-container(100%)
-      figure
-        margin: 0
-      .parallax-container
-        height: 700px
-      img
+        height: 100vh
+        position: relative
+      .img-bg
+        position: absolute
+        right: 0
+        top: 0
         width: 100%
-        filter: blur(20px)
-      .material-desc
+        height: 100%
+        overflow: hidden
+        filter: blur(5px) grayscale(50%)
+      .card-wrapper
         +outer-container()
         position: relative
-        margin-top: 100px
-        color: $white
-        background-color: rgba($black, 0.5)
-        padding: 30px
-        min-height: 500px
-        .desc
-          +span-columns(6)
-        p
+        top: 50%
+        transform: translateY(-50%)
+      .card
+        +span-columns(4)
+        +omega(3n)
+        img
+          filter: grayscale(100%)
+          transition: all 0.8s
+        .card-content
+          transition: all 0.8s
+        .card-title
+          font-weight: bold
+          font-size: 23px
+        &:hover
+          img
+            filter: grayscale(0)
+          .card-content
+            background-color: #fb8c00
+            p, a, span
+              color: $white !important
+        p, a, span
           line-height: 1.5
+          color: $black
+          transition: all 0.8s

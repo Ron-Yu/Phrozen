@@ -49,7 +49,7 @@ $(function() {
     //   indexStrings[0] = "first sentence";
     //   indexStrings[1] = "second sentence";
     //   indexStrings[2] = "third sentence";
-      
+
     //   function showString(i) {
     //      return function(){
     //        desc.text(indexStrings[i]);
@@ -68,7 +68,7 @@ $(function() {
     (function() {
 
       var indexTitle = $('#index').find('.view-1').find('.desc').find('.tlt');
-       
+
         indexTitle.textillate({
           // enable looping
           loop: true,
@@ -77,7 +77,7 @@ $(function() {
           minDisplayTime: 2000,
 
           // sets the initial delay before starting the animation
-          // (note that depending on the in effect you may need to manually apply 
+          // (note that depending on the in effect you may need to manually apply
           // visibility: hidden to the element before running this plugin)
           initialDelay: 0,
 
@@ -98,11 +98,11 @@ $(function() {
             // set to true to animate all the characters at the same time
             sync: false,
 
-            // randomize the character sequence 
+            // randomize the character sequence
             // (note that shuffle doesn't make sense with sync = true)
             shuffle: false,
 
-            // reverse the character sequence 
+            // reverse the character sequence
             // (note that reverse doesn't make sense with sync = true)
             reverse: false
           },
@@ -117,7 +117,7 @@ $(function() {
             reverse: false
           },
 
-          // callback that executes once textillate has finished 
+          // callback that executes once textillate has finished
           // callback: function () {console.log('test')};
 
           // set the type of token to animate (available types: 'char' and 'word')
@@ -128,10 +128,10 @@ $(function() {
 
         if (i >= indexStrings.length) {
           i = 0;
-        };
+        }
 
         desc.text(indexStrings[i]);
-        
+
         // .animate({opacity: 1}, 1500)
         // .delay(2000)
         // .animate({opacity: 0}, 1500);
@@ -148,7 +148,7 @@ $(function() {
 
 
     // view3 flip effect
-    $(".card").flip({
+    $(".view-3").find('.card').flip({
       trigger:'click',
       speed: 1500
     });
@@ -159,36 +159,35 @@ $(function() {
 
 
     // slider initialize
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    autoplay: false,
-    autoplayTimeout: 5000,
-    dots: true,
-    smartSpeed: 1000,
-    items: 1
-    });
-
     (function(){
       var navCtrl = $('.view-4').find('.slider-nav-control'),
           btnNext = navCtrl.find('.fa-chevron-right'),
           btnPrev = navCtrl.find('.fa-chevron-left'),
           owl = $('.owl-carousel');
 
-      console.log(btnNext);
+      $('.owl-carousel').owlCarousel({
+      loop:true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      dots: true,
+      smartSpeed: 1000,
+      items: 1
+      });
 
       btnNext.click(function() {
         owl.trigger('next.owl.carousel');
-      })
+      });
 
       btnPrev.click(function() {
         owl.trigger('prev.owl.carousel');
-      })
+      });
 
     })();
-    
+
+  // scrollReveal initialize
+  (function () {
+    window.sr = new scrollReveal();
+  })();
+
 
 });
-    
-
-  
-

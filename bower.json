@@ -34,7 +34,8 @@
     "typed.js": "*",
     "textillate": "~0.4.0",
     "flip": "~1.0.14",
-    "crayon": "*"
+    "crayon": "*",
+    "scrollReveal.js": "~2.3.2"
   },
   "install": {
     "path": {
@@ -76,6 +77,9 @@
     },
     "flip": {
       "main": "dist/jquery.flip.min.js"
+    },
+    "scrollReveal.js": {
+      "main": "dist/scrollReveal.min.js"
     }
   }
 }
